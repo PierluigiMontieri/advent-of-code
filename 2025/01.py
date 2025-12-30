@@ -28,5 +28,19 @@ for rotation in rotations:
     pointer = (pointer + rotation) % 100
 print(password)
 
-    
+pointer = 10
+password = 0
+rotation = -11
+if rotation > 0:
+    password += (pointer + rotation) // 100
+else:
+    password -= ((pointer + rotation) // 100)
+    if (pointer + rotation) % 100 == 0:
+        password += 1
+    if pointer == 0:
+        password -= 1
+
+pointer = (pointer + rotation) % 100
+print(password)
+print(pointer)
 
